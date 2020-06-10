@@ -18,7 +18,9 @@ https://helm.sh/docs/intro/quickstart/
 $ helm install stable/mysql --set persistence.enabled=false  --generate-name
 ```
 
- 得到输出：
+> 注意  需要 有参数：  `**--set persistence.enabled=false**`  否则pod会因为没有PVC而Pending （最好的解决方法是设置一个对应的PVC）
+
+得到输出：
 
 ```
 NAME: mysql-1591639340
